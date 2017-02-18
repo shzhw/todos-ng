@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "dependencies": {
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.0"
+  },
+  "name": "todos-ng",
+  "description": "使用Angular 1.x",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shzhw/todos-ng.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shzhw/todos-ng/issues"
+  },
+  "homepage": "https://github.com/shzhw/todos-ng#readme"
+}
