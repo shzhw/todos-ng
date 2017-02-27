@@ -1,11 +1,12 @@
 ﻿;(function (angular) {
 	"use strict";
+		'use utf-8'
 	angular.module('todosMVC.controller.main', ["todosMVC.service.main"])
 	.controller('MainController', [
 		'$scope',
-		'$location',
+		'$routeParams',
 		'MainService', 
-		function($scope,$location,MainService){
+		function($scope,$routeParams,MainService){
 			MainService.init();
 			//数据
 			$scope.data = MainService.get();  
@@ -54,21 +55,21 @@
 			}
 			//列表筛选
 			$scope.tagStatus={};
-			$scope.Mylocation=$location;
-			$scope.$watch('Mylocation.hash()',function(now,old){
-				//console.log(now);
-				switch(now){
-					case "/active":
-						$scope.tagStatus={completed:false};
-						break;
-					case "/completed":
-						$scope.tagStatus={completed:true};
-						break;
-					default:
-						$scope.tagStatus={};
-						break;
-				}
-			})
+			console.log($routeParams);
+			console.log($routeParams.status);
+			var status=$routeParams.status;
+			switch(status){
+				case "active":
+					$scope.tagStatus={completed:false};
+					break;
+				case "completed":
+					$scope.tagStatus={completed:true};
+					break;
+				default:
+					$scope.tagStatus={};
+					break;
+			}
+		
 			
 
 	}]);

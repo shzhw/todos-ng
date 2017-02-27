@@ -1,5 +1,6 @@
 ﻿;(function (angular) {
 	"use strict";
+		'use utf-8'
 	angular.module('todosMVC.service.main', [])
 	.service('MainService', ['$window',function(window){
 		var storage = window.localStorage;
